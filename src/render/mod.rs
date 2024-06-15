@@ -3410,6 +3410,9 @@ impl Node for VfxSimulateNode {
                             batches.init_pipeline_id.id(),
                             entity
                         );
+
+                        let state = pipeline_cache.get_compute_pipeline_state(batches.init_pipeline_id);
+                        dbg!(state);
                         continue;
                     };
 
